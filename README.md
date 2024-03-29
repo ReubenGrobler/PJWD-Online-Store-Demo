@@ -24,7 +24,8 @@ const connect = mysql.createConnection({
     port: 3306,
 });
 ```
-Please note that the password referred to here is the password you used for the MySQL connection during creation. Additionally, the code can be found roughly at the top of the file.
+<sub>*Please note that the password referred to here is the password you used for the MySQL connection during creation. Additionally, the code can be found roughly at the top of the file.</sub>
+
 10. Open Command Prompt (Windows)/Terminal (macOS/Linux) and navigate to the directory where you extracted the files. You should be in the `Phase 2` directory. On Windows, an example directory path is as follows:
 `C:\Users\John\Documents\Phase 2>`
 11. Run the command `node server.js`
