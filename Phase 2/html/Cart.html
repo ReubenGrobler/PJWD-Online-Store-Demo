@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="../StorePageStyle.css">
+    <script src="../server.js"></script>
+    <script src="../StorePageFunctionality.js"></script>
+
+    <!--Header at the very top of the page-->
+    <div class="TitleDiv">
+        Grace's Great Baked Goods: Where Sweet and Savoury Meet
+    </div>
+
+    <!--The subheader with the links to other parts of the page-->
+    <div class="UserOptionsDiv">
+        <ul id="UserOptions">
+            <li><a href="LogIn.html">Log in</a></li>
+            <li><a href="PurchaseHistory.html">Purchase History</a></li>
+            <li><a href="#">Cart</a></li>
+        </ul>
+    </div>
+
+    <!--A table that updates when a user adds an item to their shopping cart.-->
+    <h2>Your Items</h2>
+    <section class="ProductListTable">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Item</td>
+                    <td>Price</td>
+                    <td>Amount</td>
+                    <td>Subtotal</td>
+                    <td>Image</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+
+            <!--A table dynamically generated with JavaScript is printed here
+            in order to host the shopping cart items.-->
+            <tbody id="CheckoutOutput"></tbody>
+        </table>
+    </section>
+
+    <section id="Checkout">
+        <div id="Coupon">
+            <h3>Have a coupon? Use it here!</h3>
+            <div>
+                <input type="text" placeholder="Your Coupon Code" id="CouponForm">
+                <button class="RemoveFromCartButton" id="CouponButton" onclick="checkCoupon()">Get Discount</button>
+            </div>
+        </div>
+
+        <div id="TotalPriceTable">
+            <h3>Cart Summary</h3>
+
+            <!--A smaller table dynamically generated with JavaScript is printed here
+            in order to provide a summary of a user's shopping cart.-->
+            <table id="MiniTableCheckout"></table>
+
+            <button class="RemoveFromCartButton" id="ProceedToCheckoutButton" onclick="proceedToCheckout()">Proceed to
+                Checkout</button>
+        </div>
+    </section>
+
+    <div class="PopUpMessage" id="PopUpCheckout">
+        <h3>Thank you for your purchase! An email has been sent to you with more information about your order.</h4>
+            <button type="button" id="ClosePopUp13" onclick="closePopUpMessageCheckout()">Go Back to Main Page</button>
+    </div>
+
+    <!--The footer at the end of the page-->
+    <footer class="FinalInfo">
+        <div class="InfoColumn">
+            <h4>Contact Information:</h4><br>
+            <p><strong>Email: </strong>gracegoods@ggoods.com</p>
+            <p><strong>Phone number: </strong>+49 86 1030 4467</p>
+            <p><strong>Address: </strong>Peterstrasse 32 Hamburg 20097</p>
+            <p><strong>Hours: </strong>09:00 - 18:00 Monday-Saturday | 11:00 - 16:00 Sunday</p>
+        </div>
+
+        <!--Redirects the user back to the main page-->
+        <button type="button" class="GoBackButton" onclick="goBackToMainPage()">Go back to Main Page</button>
+
+        <div class="Copyright">
+            <h4>Copyright © 2024 Grace's Great Baked Goods™</h4>
+            <h5>Web Application Showcase developed by Reuben Grobler</h5>
+        </div>
+    </footer>
+
+    <!--Checks if the user is logged in-->
+    <script>
+        checkIfLoggedIn();
+    </script>
+
+    <!--Displays the items that the user has in their cart-->
+    <script>
+        displayOnCart();
+    </script>
+</body>
+
+</html>

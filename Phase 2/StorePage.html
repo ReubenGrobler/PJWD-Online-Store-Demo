@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grace's Great Baked Goods</title>
+
+    <link rel="stylesheet" href="StorePageStyle.css">
+</head>
+
+<body>
+    <script src="server.js"></script>
+    <script src="StorePageFunctionality.js"></script>
+
+    <!--Header at the very top of the page-->
+    <div class="TitleDiv">
+        Grace's Great Baked Goods: Where Sweet and Savoury Meet
+    </div>
+
+    <!--The subheader with the links to other parts of the page-->
+    <div class="UserOptionsDiv">
+        <ul id="UserOptions">
+            <li><a href="html/LogIn.html">Log in</a></li>
+            <li><a href="html/PurchaseHistory.html">Purchase History</a></li>
+            <li><a href="html/Cart.html" onclick="storesArrays()">Cart</a></li>
+        </ul>
+    </div>
+
+    <!--The main banner display of the website containing a background image-->
+    <section id="MainBanner">
+        <h5>Tired of waiting in lines for a quick treat? Look no further with...</h5>
+        <h3>Grace's Great Baked Goods!</h3>
+        <h4>Sit back and relax while you look around for something to snack on. We'll even deliver* straight to your
+            home!</h4>
+        <p>*Deliveries are only available within 10km from Hamburg, Germany</p>
+    </section>
+
+    <!--The display containing all listed products available for sale-->
+    <section id="Products">
+        <h2>Our Products</h2>
+
+        <div class="AllProducts">
+
+            <div class="SingleProduct">
+                <img src="images/products/LargeChocolateCookie.jpg" alt="Image of chocolate cookies">
+
+                <div class="DescriptionOfProduct">
+                    <h5 id="ProductName1">Large Chocolate Cookie</h5>
+                    <h4>€0.50</h4>
+
+                    <div id="ShowingStock1"></div>
+                </div>
+
+                <!--If clicked, a popup message will be displayed while preventing the screen position to reset.-->
+                <a href="javascript:void(0)" id="AddButton1" onclick="showPopUpMessage('PopUp')">Add to Shopping
+                    Cart</a>
+
+                <div class="PopUpMessage" id="PopUp">
+                    <img src="images/products/LargeChocolateCookie.jpg" alt="Image of chocolate cookies">
+                    <div id="PopUpText">
+                        <h3>Large Chocolate Cookie</h3>
+                        <h4>Price: €0.50 per item</h4>
+                        <h5>A wonderfully luxurious chocolate cookie made with the most decadent and richest of
+                            chocolates, all in a size that will be sure to bring a smile to your face!</h5>
+
+                        <div>
+                            <label for="AmountToBuy">Quantity: </label>
+                            <input type="number" id="AmountToBuy1" min="1" value="1">
+                        </div>
+
+                        <div>
+                            <!--Here, the "Add To Cart" button calls the addToCart function when clicked.
+                            This function retrieves the item, the amount to buy from an input form, the
+                            total amount of stock that there is available (retrieved from the maximum allowed
+                            input value), and the ID associated with popups
+                            in order to display said popups. This function is repeated 11 more times afterwards
+                            at each "Add To Cart" button at each product listing.-->
+                            <button type="button" id="AddToCart"
+                                onclick="addToCart('Large Chocolate Cookie', document.getElementById('AmountToBuy1').value, parseInt(document.getElementById('AmountToBuy1').getAttribute('max')), 'PopUp')">Add
+                                to Cart</button>
+                            <button type="button" id="ClosePopUp" onclick="closePopUpMessage('PopUp')">Go Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="SingleProduct">
+                <img src="images/products/ApplePieSlice.jpg" alt="Image of a slice of apple pie">
+
+                <div class="DescriptionOfProduct">
+                    <h5 id="ProductName2">Apple Pie Slice</h5>
+                    <h4>€1.00</h4>
+                    <div id="ShowingStock2"></div>
+                </div>
+
+                <a href="javascript:void(0)" id="AddButton2" onclick="showPopUpMessage('PopUp2')">Add to Shopping
+                    Cart</a>
+
+                <div class="PopUpMessage" id="PopUp2">
+                    <img src="images/products/ApplePieSlice.jpg" alt="Image of a slice of apple pie">
+                    <div id="PopUpText">
+                        <h3>Apple Pie Slice</h3>
+                        <h4>Price: €1.00 per item</h4>
+                        <h5>A sweet yet flaky slice of apple pie drenched in cinnamon is sometimes all you need to start
+                            your day!</h5>
+
+                        <div>
+                            <label for="AmountToBuy2">Quantity: </label>
+                            <input type="number" id="AmountToBuy2" min="1" value="1">
+                        </div>
+
+                        <div>
+                            <button type="button" id="AddToCart2"
+                                onclick="addToCart('Apple Pie Slice', document.getElementById('AmountToBuy2').value, parseInt(document.getElementById('AmountToBuy2').getAttribute('max')), 'PopUp2')">Add
+                                to Cart</button>
+                            <button type="button" id="ClosePopUp2" onclick="closePopUpMessage('PopUp2')">Go
+                                Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="SingleProduct">
+                <img src="images/products/StrawberryCakeWhole.jpg" alt="Image of a whole strawberry cake">
+
+                <div class="DescriptionOfProduct">
+                    <h5 id="ProductName3">Strawberry Cake (Whole)</h5>
+                    <h4>€4.50</h4>
+                    <div id="ShowingStock3"></div>
+                </div>
+
+                <a href="javascript:void(0)" id="AddButton3" onclick="showPopUpMessage('PopUp3')">Add to Shopping
+                    Cart</a>
+
+                <div class="PopUpMessage" id="PopUp3">
+                    <img src="images/products/StrawberryCakeWhole.jpg"
+                        alt="Image of a slice of a whole strawberry cake">
+                    <div id="PopUpText">
+                        <h3>Strawberry Cake (Whole)</h3>
+                        <h4>Price: €4.50 per item</h4>
+                        <h5>Have a tea party? A strawberry cake is just what you need to impress your guests when they
+                            delve into the smooth, moist texture of strawberry and cake!</h5>
+
+                        <div>
+                            <label for="AmountToBuy3">Quantity: </label>
+                            <input type="number" id="AmountToBuy3" min="1" value="1">
+                        </div>
+
+                        <div>
+                            <button type="button" id="AddToCart3"
+                                onclick="addToCart('Strawberry Cake (Whole)', document.getElementById('AmountToBuy3').value, parseInt(document.getElementById('AmountToBuy3').getAttribute('max')), 'PopUp3')">Add
+                                to Cart</button>
+                            <button type="button" id="ClosePopUp3" onclick="closePopUpMessage('PopUp3')">Go
+                                Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="SingleProduct">
+                <img src="images/products/StrawberryCakeSlice.jpg" alt="Image of a slice of strawberry cake">
+
+                <div class="DescriptionOfProduct">
+                    <h5 id="ProductName4">Strawberry Cake (Slice)</h5>
+                    <h4>€1.00</h4>
+                    <div id="ShowingStock4"></div>
+                </div>
+
+                <a href="javascript:void(0)" id="AddButton4" onclick="showPopUpMessage('PopUp4')">Add to Shopping
+                    Cart</a>
+
+                <div class="PopUpMessage" id="PopUp4">
+                    <img src="images/products/StrawberryCakeSlice.jpg" alt="Image of a slice of strawberry cake">
+                    <div id="PopUpText">
+                        <h3>Strawberry Cake (Slice)</h3>
+                        <h4>Price: €1.00 per item</h4>
+                        <h5>In the mood for a rich strawberry flavour? We got you covered with a slice of strawberry
+                            cake, just for you!</h5>
+
+                        <div>
+                            <label for="AmountToBuy4">Quantity: </label>
+                            <input type="number" id="AmountToBuy4" min="1" value="1">
+                        </div>
+
+                        <div>
+                            <button type="button" id="AddToCart4"
+                                onclick="addToCart('Strawberry Cake (Slice)', document.getElementById('AmountToBuy4').value, parseInt(document.getElementById('AmountToBuy4').getAttribute('max')), 'PopUp4')">Add
+                                to Cart</button>
+                            <button type="button" id="ClosePopUp4" onclick="closePopUpMessage('PopUp4')">Go
+                                Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="SingleProduct">
+                <img src="images/products/Biscotti.jpg" alt="Image of some biscotti">
+
+                <div class="DescriptionOfProduct">
+                    <h5 id="ProductName5">Biscotti</h5>
+                    <h4>€0.50</h4>
+                    <div id="ShowingStock5"></div>
+                </div>
+
+                <a href="javascript:void(0)" id="AddButton5" onclick="showPopUpMessage('PopUp5')">Add to Shopping
+                    Cart</a>
+
+                <div class="PopUpMessage" id="PopUp5">
+                    <img src="images/products/Biscotti.jpg" alt="Image of some biscotti">
+                    <div id="PopUpText">
+                        <h3>Biscotti</h3>
+                        <h4>Price: €0.50 per item</h4>
+                        <h5>A light snack like Biscotti goes perfectly well with a nice cup of coffee to start your day!
+                        </h5>
+
+                        <div>
+                            <label for="AmountToBuy5">Quantity: </label>
+                            <input type="number" id="AmountToBuy5" min="1" value="1">
+                        </div>
+
+                        <div>
+                            <button type="button" id="AddToCart5"
+                                onclick="addToCart('Biscotti', document.getElementById('AmountToBuy5').value, parseInt(document.getElementById('AmountToBuy5').getAttribute('max')), 'PopUp5')">Add
+                                to Cart</button>
+                            <button type="button" id="ClosePopUp5" onclick="closePopUpMessage('PopUp5')">Go
+                                Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="SingleProduct">
+                <img src="images/products/Fudge.jpg" alt="Image of some fudge">
+
+                <div class="DescriptionOfProduct">
+                    <h5 id="ProductName6">Fudge</h5>
+                    <h4>€0.75</h4>
+                    <div id="ShowingStock6"></div>
+                </div>
+
+                <a href="javascript:void(0)" id="AddButton6" onclick="showPopUpMessage('PopUp6')">Add to Shopping
+                    Cart</a>
+
+                <div class="PopUpMessage" id="PopUp6">
+                    <img src="images/products/Fudge.jpg" alt="Image of some fudge">
+                    <div id="PopUpText">
+                        <h3>Fudge</h3>
+                        <h4>Price: €0.75 per item</h4>
+                        <h5>This melt-in-your-mouth fudge is sure to please anybody with a sweettooth!</h5>
+
+                        <div>
+                            <label for="AmountToBuy6">Quantity: </label>
+                            <input type="number" id="AmountToBuy6" min="1" value="1">
+                        </div>
+
+                        <div>
+                            <button type="button" id="AddToCart6"
+                                onclick="addToCart('Fudge', document.getElementById('AmountToBuy6').value, parseInt(document.getElementById('AmountToBuy6').getAttribute('max')), 'PopUp6')">Add
+                                to Cart</button>
+                            <button type="button" id="ClosePopUp6" onclick="closePopUpMessage('PopUp6')">Go
+                                Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="SingleProduct">
+                <img src="images/products/MiniQuiche.jpg" alt="Image of some small quiches">
+
+                <div class="DescriptionOfProduct">
+                    <h5 id="ProductName7">Mini Quiche</h5>
+                    <h4>€0.90</h4>
+                    <div id="ShowingStock7"></div>
+                </div>
+
+                <a href="javascript:void(0)" id="AddButton7" onclick="showPopUpMessage('PopUp7')">Add to Shopping
+                    Cart</a>
+
+                <div class="PopUpMessage" id="PopUp7">
+                    <img src="images/products/MiniQuiche.jpg" alt="Image of some small quiches">
+                    <div id="PopUpText">
+                        <h3>Mini Quiche</h3>
+                        <h4>Price: €0.90 per item</h4>
+                        <h5>You can never go wrong with this small savoury French tart! Now in small grab-and-go pieces!
+                        </h5>
+
+                        <div>
+                            <label for="AmountToBuy7">Quantity: </label>
+                            <input type="number" id="AmountToBuy7" min="1" value="1">
+                        </div>
+
+                        <div>
+                            <button type="button" id="AddToCart7"
+                                onclick="addToCart('Mini Quiche', document.getElementById('AmountToBuy7').value, parseInt(document.getElementById('AmountToBuy7').getAttribute('max')), 'PopUp7')">Add
+                                to Cart</button>
+                            <button type="button" id="ClosePopUp7" onclick="closePopUpMessage('PopUp7')">Go
+                                Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="SingleProduct">
+                <img src="images/products/Doughnut.jpg" alt="Image of some doughnuts">
+
+                <div class="DescriptionOfProduct">
+                    <h5 id="ProductName8">Doughnut</h5>
+                    <h4>€0.50</h4>
+                    <div id="ShowingStock8"></div>
+                </div>
+
+                <a href="javascript:void(0)" id="AddButton8" onclick="showPopUpMessage('PopUp8')">Add to Shopping
+                    Cart</a>
+
+                <div class="PopUpMessage" id="PopUp8">
+                    <img src="images/products/Doughnut.jpg" alt="Image of some doughnuts">
+                    <div id="PopUpText">
+                        <h3>Doughnut</h3>
+                        <h4>Price: €0.50 per item</h4>
+                        <h5>A classic snack for the busy office worker who forgot to have breakfast! Be sure to grab one
+                            fast!</h5>
+
+                        <div>
+                            <label for="AmountToBuy8">Quantity: </label>
+                            <input type="number" id="AmountToBuy8" min="1" value="1">
+                        </div>
+
+                        <div>
+                            <button type="button" id="AddToCart8"
+                                onclick="addToCart('Doughnut', document.getElementById('AmountToBuy8').value, parseInt(document.getElementById('AmountToBuy8').getAttribute('max')), 'PopUp8')">Add
+                                to Cart</button>
+                            <button type="button" id="ClosePopUp8" onclick="closePopUpMessage('PopUp8')">Go
+                                Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="SingleProduct">
+                <img src="images/products/Croissant.jpg" alt="Image of some croissants">
+
+                <div class="DescriptionOfProduct">
+                    <h5 id="ProductName9">Croissant</h5>
+                    <h4>€1.00</h4>
+                    <div id="ShowingStock9"></div>
+                </div>
+
+                <a href="javascript:void(0)" id="AddButton9" onclick="showPopUpMessage('PopUp9')">Add to Shopping
+                    Cart</a>
+
+                <div class="PopUpMessage" id="PopUp9">
+                    <img src="images/products/Croissant.jpg" alt="Image of some croissants">
+                    <div id="PopUpText">
+                        <h3>Croissant</h3>
+                        <h4>Price: €1.00 per item</h4>
+                        <h5>A puffy and soft pastry like the croissant is guaranteed to leave a hunger for more!</h5>
+
+                        <div>
+                            <label for="AmountToBuy9">Quantity: </label>
+                            <input type="number" id="AmountToBuy9" min="1" value="1">
+                        </div>
+
+                        <div>
+                            <button type="button" id="AddToCart9"
+                                onclick="addToCart('Croissant', document.getElementById('AmountToBuy9').value, parseInt(document.getElementById('AmountToBuy9').getAttribute('max')), 'PopUp9')">Add
+                                to Cart</button>
+                            <button type="button" id="ClosePopUp9" onclick="closePopUpMessage('PopUp9')">Go
+                                Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="SingleProduct">
+                <img src="images/products/Scone.jpg" alt="Image of a scone">
+
+                <div class="DescriptionOfProduct">
+                    <h5 id="ProductName10">Scone</h5>
+                    <h4>€0.65</h4>
+                    <div id="ShowingStock10"></div>
+                </div>
+
+                <a href="javascript:void(0)" id="AddButton10" onclick="showPopUpMessage('PopUp10')">Add to Shopping
+                    Cart</a>
+
+                <div class="PopUpMessage" id="PopUp10">
+                    <img src="images/products/Scone.jpg" alt="Image of a scone">
+                    <div id="PopUpText">
+                        <h3>Scone</h3>
+                        <h4>Price: €0.65 per item</h4>
+                        <h5>As a crunchy and slightly sweet staple for any tea party, the scone is a must have when
+                            you're drinking a gentle cup of tea!</h5>
+
+                        <div>
+                            <label for="AmountToBuy10">Quantity: </label>
+                            <input type="number" id="AmountToBuy10" min="1" value="1">
+                        </div>
+
+                        <div>
+                            <button type="button" id="AddToCart10"
+                                onclick="addToCart('Scone', document.getElementById('AmountToBuy10').value, parseInt(document.getElementById('AmountToBuy10').getAttribute('max')), 'PopUp10')">Add
+                                to Cart</button>
+                            <button type="button" id="ClosePopUp10" onclick="closePopUpMessage('PopUp10')">Go
+                                Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="SingleProduct">
+                <img src="images/products/BlueberryMuffin.jpg" alt="Image of some blueberry muffins">
+
+                <div class="DescriptionOfProduct">
+                    <h5 id="ProductName11">Blueberry Muffin</h5>
+                    <h4>€1.00</h4>
+                    <div id="ShowingStock11"></div>
+                </div>
+
+                <a href="javascript:void(0)" id="AddButton11" onclick="showPopUpMessage('PopUp11')">Add to Shopping
+                    Cart</a>
+
+                <div class="PopUpMessage" id="PopUp11">
+                    <img src="images/products/BlueberryMuffin.jpg" alt="Image of some blueberry muffins">
+                    <div id="PopUpText">
+                        <h3>Blueberry Muffin</h3>
+                        <h4>Price: €1.00 per item</h4>
+                        <h5>In the mood for something tangy and sweet? A warm, freshly baked blueberry muffin is just
+                            the thing you need to satisfy your appetite!</h5>
+
+                        <div>
+                            <label for="AmountToBuy11">Quantity: </label>
+                            <input type="number" id="AmountToBuy11" min="1" value="1">
+                        </div>
+
+                        <div>
+                            <button type="button" id="AddToCart11"
+                                onclick="addToCart('Blueberry Muffin', document.getElementById('AmountToBuy11').value, parseInt(document.getElementById('AmountToBuy11').getAttribute('max')), 'PopUp11')">Add
+                                to Cart</button>
+                            <button type="button" id="ClosePopUp11" onclick="closePopUpMessage('PopUp11')">Go
+                                Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="SingleProduct">
+                <img src="images/products/SaltedBagel.jpg" alt="Image of some salted bagels">
+
+                <div class="DescriptionOfProduct">
+                    <h5 id="ProductName12">Salted Bagel</h5>
+                    <h4>€2.00</h4>
+                    <div id="ShowingStock12"></div>
+                </div>
+
+                <a href="javascript:void(0)" id="AddButton12" onclick="showPopUpMessage('PopUp12')">Add to Shopping
+                    Cart</a>
+
+                <div class="PopUpMessage" id="PopUp12">
+                    <img src="images/products/SaltedBagel.jpg" alt="Image of some salted bagels">
+                    <div id="PopUpText">
+                        <h3>Salted Bagel</h3>
+                        <h4>Price: €2.00 per item</h4>
+                        <h5>For those that want something on the more salty end, try our brand new salted bagels, New
+                            York style!</h5>
+
+                        <div>
+                            <label for="AmountToBuy12">Quantity: </label>
+                            <input type="number" id="AmountToBuy12" min="1" value="1">
+                        </div>
+
+                        <div>
+                            <button type="button" id="AddToCart12"
+                                onclick="addToCart('Salted Bagel', document.getElementById('AmountToBuy12').value, parseInt(document.getElementById('AmountToBuy12').getAttribute('max')), 'PopUp12')">Add
+                                to Cart</button>
+                            <button type="button" id="ClosePopUp12" onclick="closePopUpMessage('PopUp12')">Go
+                                Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--The footer at the end of the page-->
+    <footer class="FinalInfo">
+        <div class="InfoColumn">
+            <h4>Contact Information:</h4><br>
+            <p><strong>Email: </strong>gracegoods@ggoods.com</p>
+            <p><strong>Phone number: </strong>+49 86 1030 4467</p>
+            <p><strong>Address: </strong>Peterstrasse 32 Hamburg 20097</p>
+            <p><strong>Hours: </strong>09:00 - 18:00 Monday-Saturday | 11:00 - 16:00 Sunday</p>
+        </div>
+
+        <div class="Copyright">
+            <h4>Copyright © 2024 Grace's Great Baked Goods™</h4>
+            <h5>Web Application Showcase developed by Reuben Grobler</h5>
+        </div>
+    </footer>
+
+    <!--Checks if the user is logged in-->
+    <script>
+        checkIfLoggedIn();
+    </script>
+
+    <!--Retrieves the current stock available of each product-->
+    <script>
+        displayStockForProduct("ProductName1", "ShowingStock1", "AddButton1", "AmountToBuy1");
+        displayStockForProduct("ProductName2", "ShowingStock2", "AddButton2", "AmountToBuy2");
+        displayStockForProduct("ProductName3", "ShowingStock3", "AddButton3", "AmountToBuy3");
+        displayStockForProduct("ProductName4", "ShowingStock4", "AddButton4", "AmountToBuy4");
+        displayStockForProduct("ProductName5", "ShowingStock5", "AddButton5", "AmountToBuy5");
+        displayStockForProduct("ProductName6", "ShowingStock6", "AddButton6", "AmountToBuy6");
+        displayStockForProduct("ProductName7", "ShowingStock7", "AddButton7", "AmountToBuy7");
+        displayStockForProduct("ProductName8", "ShowingStock8", "AddButton8", "AmountToBuy8");
+        displayStockForProduct("ProductName9", "ShowingStock9", "AddButton9", "AmountToBuy9");
+        displayStockForProduct("ProductName10", "ShowingStock10", "AddButton10", "AmountToBuy10");
+        displayStockForProduct("ProductName11", "ShowingStock11", "AddButton11", "AmountToBuy11");
+        displayStockForProduct("ProductName12", "ShowingStock12", "AddButton12", "AmountToBuy12");
+    </script>
+</body>
+
+</html>

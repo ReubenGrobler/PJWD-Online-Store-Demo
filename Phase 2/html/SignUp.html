@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register For Your Account</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="../StorePageStyle.css">
+    <script src="../server.js"></script>
+    <script src="../StorePageFunctionality.js"></script>
+
+    <!--Header at the very top of the page-->
+    <div class="TitleDiv">
+        Grace's Great Baked Goods: Where Sweet and Savoury Meet
+    </div>
+
+    <!--The subheader with the links to other parts of the page-->
+    <div class="UserOptionsDiv">
+        <ul id="UserOptions">
+            <li><a href="LogIn.html">Log in</a></li>
+            <li><a href="PurchaseHistory.html">Purchase History</a></li>
+            <li><a href="Cart.html">Cart</a></li>
+        </ul>
+    </div>
+
+    <!--This allows a user who already has an account to go back to the
+    LogIn page.-->
+    <div class="LogInHeader">
+        <h2>Register For Your Account</h2>
+        <h3>Have an account? <a href="LogIn.html">Sign In Here</a></h3>
+    </div>
+
+    <!--The Sign-Up Form of the page-->
+    <section id="Form">
+        <div class="AccountInputForm">
+            <h3>First Name:</h3>
+            <input type="text" class="UserInputForm" id="FirstNameInputForm" size="30" placeholder="First Name"
+                required>
+
+            <h3>Last Name:</h3>
+            <input type="text" class="UserInputForm" id="LastNameInputForm" size="30" placeholder="Last Name" required>
+
+            <h3>Email Address:</h3>
+            <input type="text" class="UserInputForm" id="EmailInputForm2" size="30" placeholder="Email Address"
+                required>
+
+            <h3>Password:</h3>
+            <h5>Your password must be between 6 and 50 characters long</h5>
+            <input type="password" class="UserInputForm" id="PasswordInputForm2" size="30" placeholder="Password"
+                required>
+
+            <h3>Phone Number:</h3>
+            <h5>Please format your phone number as follows: +490123456789</h5>
+            <input type="text" class="UserInputForm" id="PhoneNumberInputForm" size="30" placeholder="Phone Number"
+                required>
+
+            <h3>Street Address:</h3>
+            <input type="text" class="UserInputForm" id="StreetAddressInputForm" size="30" placeholder="Street Address"
+                required>
+
+            <h3>Locality:</h3>
+            <input type="text" class="UserInputForm" id="LocalityInputForm" size="30" placeholder="Locality" required>
+
+            <h3>Postal Code:</h3>
+            <input type="text" class="UserInputForm" id="PostalCodeInputForm" size="30" placeholder="Postal Code"
+                required>
+
+            <button type="button" id="SignUpButton" onclick="signingUpForNewAccount()">Sign Up</button>
+
+        </div>
+        <button type="button" class="GoBackButton" onclick="goBackToMainPage()">Go back</button>
+    </section>
+
+    <!--The footer at the end of the page-->
+    <footer class="FinalInfo">
+        <div class="InfoColumn">
+            <h4>Contact Information:</h4><br>
+            <p><strong>Email: </strong>gracegoods@ggoods.com</p>
+            <p><strong>Phone number: </strong>+49 86 1030 4467</p>
+            <p><strong>Address: </strong>Peterstrasse 32 Hamburg 20097</p>
+            <p><strong>Hours: </strong>09:00 - 18:00 Monday-Saturday | 11:00 - 16:00 Sunday</p>
+        </div>
+
+        <div class="Copyright">
+            <h4>Copyright © 2024 Grace's Great Baked Goods™</h4>
+            <h5>Web Application Showcase developed by Reuben Grobler</h5>
+        </div>
+    </footer>
+</body>
+
+</html>

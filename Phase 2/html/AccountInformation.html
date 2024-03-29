@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Information</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="../StorePageStyle.css">
+    <script src="../server.js"></script>
+    <script src="../StorePageFunctionality.js"></script>
+
+    <!--Header at the very top of the page-->
+    <div class="TitleDiv">
+        Grace's Great Baked Goods: Where Sweet and Savoury Meet
+    </div>
+
+    <!--The subheader with the links to other parts of the page-->
+    <div class="UserOptionsDiv">
+        <ul id="UserOptions">
+            <li><a href="LogIn.html">Log in</a></li>
+            <li><a href="PurchaseHistory.html">Purchase History</a></li>
+            <li><a href="Cart.html">Cart</a></li>
+        </ul>
+    </div>
+
+    <div class="InformationForm">
+        <h1>Your account</h1>
+        <div class="UserInformation" id="DisplayUserInformation"></div>
+    </div>
+
+    <!--The footer at the end of the page-->
+    <footer class="FinalInfo">
+        <div class="InfoColumn">
+            <h4>Contact Information:</h4><br>
+            <p><strong>Email: </strong>gracegoods@ggoods.com</p>
+            <p><strong>Phone number: </strong>+49 86 1030 4467</p>
+            <p><strong>Address: </strong>Peterstrasse 32 Hamburg 20097</p>
+            <p><strong>Hours: </strong>09:00 - 18:00 Monday-Saturday | 11:00 - 16:00 Sunday</p>
+        </div>
+
+        <!--Redirects the user back to the main page-->
+        <button type="button" class="GoBackButton" onclick="goBackToMainPage()">Go back to Main Page</button>
+
+        <div class="Copyright">
+            <h4>Copyright © 2024 Grace's Great Baked Goods™</h4>
+            <h5>Web Application Showcase developed by Reuben Grobler</h5>
+        </div>
+    </footer>
+
+
+    <!--Code responsible for retrieving information from the backend-->
+    <script>
+        displayUserAccountInfo();
+    </script>
+
+    <!--Checks if the user is logged in-->
+    <script>
+        checkIfLoggedIn();
+    </script>
+
+</body>
+
+</html>

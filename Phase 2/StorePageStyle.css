@@ -1,0 +1,632 @@
+/*CSS Across All Files*/
+body {
+    background-color: #EADDCA;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*=======================*/
+/* CSS FOR StorePage.html*/
+/*=======================*/
+
+/*CSS attributes for headings at the top of the page*/
+.TitleDiv {
+    background-color: rgb(255, 191, 108);
+    color: rgb(239, 66, 124);
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px 0px 20px 75px;
+}
+
+.UserOptionsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    padding: 15px 50px;
+    background-color: rgb(255, 215, 163);
+    box-shadow: 0px 10px 25px rgb(0, 0, 0, 0.75);
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+}
+
+#UserOptions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*CSS attributes for the hyperlinks on the top of the page*/
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    padding: 0px 15px;
+}
+
+li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(84, 54, 15);
+    transition: 0.5s ease;
+}
+
+li a:hover {
+    color: rgb(60, 160, 127);
+}
+
+/*CSS Attributes for headers*/
+h2 {
+    font-size: 40px;
+    color: rgb(40, 165, 197);
+    text-align: center;
+}
+
+/*CSS attributes for the main banner*/
+#MainBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: url("images/ui/MainCover.jpg");
+    background-size: cover;
+    background-position: top 70% right 0;
+    height: 90vh;
+    max-width: 100%;
+    padding: 0px 80px;
+    box-shadow: 0px 5px 15px rgb(0, 0, 0, 0.5);
+}
+
+#MainBanner h3 {
+    color: rgb(239, 66, 124);
+    background-color: beige;
+    border: 2px solid black;
+    padding: 10px;
+    display: inline-block;
+    font-size: xx-large;
+}
+
+#MainBanner h4 {
+    background-color: beige;
+    border: 2px solid black;
+    padding: 5px;
+    display: inline-block;
+    font-size: large;
+}
+
+#MainBanner h5 {
+    background-color: beige;
+    border: 2px solid black;
+    padding: 3px;
+    display: inline-block;
+    font-size: medium;
+}
+
+#MainBanner p {
+    background-color: beige;
+    border: 2px solid black;
+    padding: 2px;
+    display: inline-block;
+}
+
+/*CSS Attributes for the products available*/
+#Products {
+    text-align: center;
+}
+
+#Products .SingleProduct {
+    background-color: white;
+    width: 20%;
+    min-width: 200px;
+    padding: 10px 12px;
+    margin: 25px 0px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+#Products .SingleProduct img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.SingleProduct a {
+    text-decoration: none;
+    width: auto;
+    display: inline-block;
+    transition: 0.25s ease;
+    color: black;
+    background-color: skyblue;
+    border: 3px solid rgb(74, 146, 175);
+    padding: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 30px;
+}
+
+.SingleProduct a:hover {
+    color: rgb(219, 110, 0);
+    cursor: pointer;
+}
+
+.SingleProduct h4 {
+    color: rgb(176, 96, 255);
+}
+
+#Products .AllProducts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 35px;
+}
+
+/*CSS Attributes for a popup message when a user wishes to add an item to their cart*/
+.PopUpMessage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+    text-align: center;
+    visibility: hidden;
+    background-color: rgb(170, 132, 74);
+    color: white;
+    width: 60vw;
+    padding: 30px;
+    border-radius: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: transform 0.25s;
+    z-index: 9999;
+}
+
+.PopUpMessage img {
+    align-self: flex-start;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 50%;
+    max-height: 20%;
+    border-radius: 0px;
+}
+
+.PopUpMessage h4 {
+    color: whitesmoke;
+    margin: 10px 0px;
+}
+
+#PopUpText {
+    padding-left: 20px;
+    text-align: left;
+}
+
+#AmountToBuy1,
+#AmountToBuy2,
+#AmountToBuy3,
+#AmountToBuy4,
+#AmountToBuy5,
+#AmountToBuy6,
+#AmountToBuy7,
+#AmountToBuy8,
+#AmountToBuy9,
+#AmountToBuy10,
+#AmountToBuy11,
+#AmountToBuy12 {
+    padding: 10px;
+    width: 70%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.PopUpMessage button {
+    padding: 20px 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid black;
+    margin: 10px;
+    width: 80%;
+}
+
+.PopUpMessage button:hover {
+    cursor: pointer;
+}
+
+#AddToCart,
+#AddToCart2,
+#AddToCart3,
+#AddToCart4,
+#AddToCart5,
+#AddToCart6,
+#AddToCart7,
+#AddToCart8,
+#AddToCart9,
+#AddToCart10,
+#AddToCart11,
+#AddToCart12 {
+    background-color: rgb(123, 205, 124);
+}
+
+#ClosePopUp,
+#ClosePopUp2,
+#ClosePopUp3,
+#ClosePopUp4,
+#ClosePopUp5,
+#ClosePopUp6,
+#ClosePopUp7,
+#ClosePopUp8,
+#ClosePopUp9,
+#ClosePopUp10,
+#ClosePopUp11,
+#ClosePopUp12,
+#ClosePopUp13 {
+    background-color: rgb(171, 68, 68);
+    color: white;
+}
+
+.openedPopUpMessage {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*CSS Attributes for footer section*/
+footer {
+    text-align: center;
+}
+
+footer .InfoColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5% 10% 0% 10%;
+    background-color: rgb(206, 206, 206);
+    box-shadow: 0px 10px 25px rgb(0, 0, 0, 0.55);
+    padding: 40px 20px;
+    color: rgb(87, 87, 162);
+}
+
+footer .Copyright {
+    color: rgb(125, 125, 125);
+    padding: 20px 0px 15px 0px;
+}
+
+/*CSS attributes for a "return to home page" button*/
+footer .GoBackButton {
+    background-color: rgb(112, 17, 96);
+    color: white;
+    box-shadow: 0px 7px 20px rgb(0, 0, 0, 0.55);
+    padding: 20px;
+    margin: 20px 0px;
+    font-size: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+footer .GoBackButton:hover {
+    cursor: pointer;
+    background-color: rgb(210, 0, 200);
+}
+
+/*CSS Code for responsive design in regards to smaller screens*/
+
+@media screen and (max-width: 280px) {
+    .TitleDiv {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    li a {
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #MainBanner h3,
+    #MainBanner h5 {
+        display: none;
+    }
+
+    .PopUpMessage {
+        font-size: 4vw;
+    }
+
+    .PopUpMessage img {
+        min-width: 50px;
+        min-height: 50px;
+    }
+}
+
+@media screen and (max-width: 924px) {
+    #Products .AllProducts {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    #Products .AllProducts {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    footer .InfoColumn {
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    footer .InfoColumn {
+        font-size: 4vw;
+    }
+}
+
+/*===================================*/
+/* CSS FOR LogIn.html AND SignUp.html*/
+/*===================================*/
+
+/*CSS attributes for a log-in form that will be reused for signing up for a new account*/
+#Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgb(255, 255, 255), rgb(208, 208, 160));
+    color: rgb(81, 81, 81);
+    box-shadow: 0px 10px 25px rgb(0, 0, 0, 0.55);
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 10vh 20px;
+    margin: 5% 0%;
+}
+
+#Form .AccountInputForm h3 {
+    text-decoration: underline;
+}
+
+#Form .UserInputForm {
+    padding: 0px 2em;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 3.125rem;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: left;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+#Form button {
+    background-color: rgb(112, 17, 17);
+    color: white;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0px 7px 20px rgb(0, 0, 0, 0.55);
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: large;
+}
+
+#Form .AccountInputForm button {
+    background-color: rgb(152, 81, 55);
+    width: 100%;
+}
+
+#Form button:hover {
+    background-color: rgb(28, 97, 28);
+    box-shadow: 0px 5px 15px rgb(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+
+/*CSS Attributes for a header*/
+
+.LogInHeader h3 {
+    color: rgb(40, 165, 197);
+    font-size: 20px;
+    text-align: center;
+}
+
+.LogInHeader a {
+    color: indigo;
+    text-decoration: none;
+}
+
+/*==================*/
+/* CSS FOR Cart.html*/
+/*==================*/
+
+.RemoveFromCartButton {
+    background-color: rgb(160, 0, 0);
+    color: white;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgb(0, 0, 0, 0.25);
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: large;
+}
+
+.RemoveFromCartButton:hover {
+    cursor: pointer;
+}
+
+.ProductListTable table {
+    background-color: white;
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+.ProductListTable table img {
+    width: 70px;
+    padding: 15px 0px;
+}
+
+.ProductListTable table td:nth-child(1) {
+    width: 150px;
+    text-align: center;
+}
+
+.ProductListTable table td:nth-child(2),
+.ProductListTable table td:nth-child(3),
+.ProductListTable table td:nth-child(4) {
+    width: 80px;
+    text-align: center;
+}
+
+.ProductListTable table td:nth-child(5) {
+    width: 50px;
+    text-align: center;
+}
+
+.ProductListTable table td:nth-child(6) {
+    width: 75px;
+    text-align: center;
+}
+
+.ProductListTable table td:nth-child(3) input {
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+
+.ProductListTable table thead {
+    border: 1px solid black;
+}
+
+.ProductListTable table thead td {
+    background-color: rgb(221, 151, 211);
+    font-weight: 500;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.ProductListTable table tbody tr td {
+    border-bottom: 1px solid rgb(172, 192, 211);
+    padding-top: 10px;
+}
+
+#Checkout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#Coupon {
+    width: 30%;
+    margin: 20px 0px;
+}
+
+#Coupon h3,
+#TotalPriceTable h3 {
+    color: rgb(40, 165, 197);
+    padding-bottom: 10px;
+}
+
+#Coupon input {
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+}
+
+#Coupon button {
+    padding: 8px 15px;
+}
+
+#TotalPriceTable {
+    border: 1px solid black;
+    width: 30%;
+    margin: 20px 0px;
+    margin-right: 5%;
+    padding: 5px 20px;
+}
+
+#TotalPriceTable table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#TotalPriceTable table td {
+    border: 1px solid black;
+    width: 20%;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.ProductListTable {
+    overflow-x: auto;
+}
+
+/*CSS code for responsive design*/
+@media screen and (max-width: 500px) {
+    #Checkout {
+        flex-direction: column;
+    }
+
+    #Coupon {
+        width: 100%;
+    }
+
+    #TotalPriceTable {
+        width: 90%;
+        padding: 20px 15px;
+    }
+}
+
+/*================================*/
+/* CSS FOR AccountInformation.html*/
+/*================================*/
+
+.InformationForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(78, 77, 77);
+    color: white;
+    box-sizing: border-box;
+    border-radius: 30px;
+    box-shadow: 0px 10px 10px rgb(0, 0, 0, 0.3);
+    padding-left: 30px;
+    padding-bottom: 20px;
+    margin: 5% 10% 0% 10%;
+}
+
+/*=============================*/
+/* CSS FOR PurchaseHistory.html*/
+/*=============================*/
+#PurchaseHistory .ProductListTable table td:nth-child(1) {
+   width: 120px;
+}
+
+#PurchaseHistory .ProductListTable table td:nth-child(2) {
+    width: 110px;
+}
+
+#PurchaseHistory .ProductListTable table td:nth-child(3) {
+    width: 250px;
+}
+
+#PurchaseHistory .ProductListTable table td:nth-child(4) {
+    width: 140px;
+}
+
+#PurchaseHistory .ProductListTable table td:nth-child(5) {
+    width: 120px;
+}

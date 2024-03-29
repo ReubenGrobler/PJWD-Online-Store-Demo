@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Purchase History</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="../StorePageStyle.css">
+    <script src="../server.js"></script>
+    <script src="../StorePageFunctionality.js"></script>
+
+    <!--Header at the very top of the page-->
+    <div class="TitleDiv">
+        Grace's Great Baked Goods: Where Sweet and Savoury Meet
+    </div>
+
+    <!--The subheader with the links to other parts of the page-->
+    <div class="UserOptionsDiv">
+        <ul id="UserOptions">
+            <!--This will prompt a log in screen. Note that there will also be an option to sign up once it has popped up-->
+            <li><a href="LogIn.html">Log in</a></li>
+            <li><a href="#">Purchase History</a></li>
+            <li><a href="Cart.html">Cart</a></li>
+        </ul>
+    </div>
+
+    <!--A table that appears when a user looks at their purchase history.
+    This table updates as more purchases are made.-->
+    <h2>Your Purchase History</h2>
+    <section id="PurchaseHistory">
+        <div class="ProductListTable">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Purchase ID</td>
+                        <td>Date</td>
+                        <td>Products</td>
+                        <td>Amount of Products</td>
+                        <td>Grand Total</td>
+                    </tr>
+                </thead>
+
+                <!--Here, the table is dynamically created with JavaScript.-->
+                <tbody id="TableOutput"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!--The footer at the end of the page-->
+    <footer class="FinalInfo">
+        <div class="InfoColumn">
+            <h4>Contact Information:</h4><br>
+            <p><strong>Email: </strong>gracegoods@ggoods.com</p>
+            <p><strong>Phone number: </strong>+49 86 1030 4467</p>
+            <p><strong>Address: </strong>Peterstrasse 32 Hamburg 20097</p>
+            <p><strong>Hours: </strong>09:00 - 18:00 Monday-Saturday | 11:00 - 16:00 Sunday</p>
+        </div>
+
+        <!--Redirects the user back to the main page-->
+        <button type="button" class="GoBackButton" onclick="goBackToMainPage()">Go back to Main Page</button>
+
+        <div class="Copyright">
+            <h4>Copyright © 2024 Grace's Great Baked Goods™</h4>
+            <h5>Web Application Showcase developed by Reuben Grobler</h5>
+        </div>
+    </footer>
+
+    
+    <!--Checks if the user is logged in-->
+    <script>
+        checkIfLoggedIn();
+    </script>
+
+    <!--Code responsible for retrieving information from the backend-->
+    <script>
+        getPurchaseHistory();
+    </script>
+</body>
+
+</html>
