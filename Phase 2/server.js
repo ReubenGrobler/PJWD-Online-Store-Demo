@@ -222,7 +222,7 @@ app.post("/coupon", (req, res) => {
                 res.status(200).json({ status: "Successful", message: "You have entered a valid coupon! Enjoy your discount!" });
             } else {
                 console.log(sql);
-                res.status(401).json({ status: "Unsuccessful", message: "You have not enterred a valid coupon." });
+                res.status(401).json({ status: "Unsuccessful", message: "You have not entered a valid coupon." });
             }
         }
     });
