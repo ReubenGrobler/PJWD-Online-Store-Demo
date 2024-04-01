@@ -191,6 +191,7 @@ h2 {
     background-color: rgb(170, 132, 74);
     color: white;
     width: 60vw;
+    height: 70%;
     padding: 30px;
     border-radius: 30px;
     left: 50%;
@@ -204,8 +205,9 @@ h2 {
     min-width: 100px;
     min-height: 100px;
     max-width: 50%;
-    max-height: 20%;
-    border-radius: 0px;
+    height: auto;
+    max-height: 100%;
+    border-radius: 2px;
 }
 
 .PopUpMessage h4 {
