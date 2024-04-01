@@ -355,6 +355,10 @@ footer .GoBackButton:hover {
         min-width: 50px;
         min-height: 50px;
     }
+
+    .InformationForm{
+        font-size: 5vw;
+    }
 }
 
 @media screen and (max-width: 924px) {
