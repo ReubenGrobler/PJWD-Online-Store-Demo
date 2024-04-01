@@ -37,6 +37,16 @@ body {
     justify-content: center;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 /*CSS attributes for the hyperlinks on the top of the page*/
 ul {
     list-style: none;
