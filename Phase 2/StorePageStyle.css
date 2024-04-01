@@ -359,7 +359,7 @@ footer .GoBackButton:hover {
     }
 }
 
-@media screen and (max-width: 270px) {
+@media screen and (max-width: 300px) {
     footer .InfoColumn {
         font-size: 5vw;
     }
