@@ -456,6 +456,12 @@ footer .GoBackButton:hover {
     }
 }
 
+@media screen and (max-width: 800px) {
+    #Coupon input::placeholder {
+        text-overflow: ellipsis;
+    }
+}
+
 /*===================================*/
 /* CSS FOR LogIn.html AND SignUp.html*/
 /*===================================*/
@@ -610,7 +616,7 @@ footer .GoBackButton:hover {
 }
 
 #Coupon {
-    width: 30%;
+    width: 60%;
     margin: 20px 0px;
 }
 
