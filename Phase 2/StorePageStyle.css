@@ -370,13 +370,24 @@ footer .GoBackButton:hover {
     }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 600px) {
 
     #MainBanner h3,
     #MainBanner h5 {
         display: none;
     }
+}
 
+@media screen and (max-height: 500px){
+    #MainBanner h4,
+    #MainBanner p {
+        font-size: 90%;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
     #MainBanner h4,
     #MainBanner p {
         font-size: 3.5vw;
@@ -411,7 +422,7 @@ footer .GoBackButton:hover {
     }
 }
 
-@media screen and (max-height: 350px) {
+@media screen and (max-height: 350px){
     .PopUpMessage h5{
         display: none;
     }
