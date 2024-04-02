@@ -1,5 +1,5 @@
 # PJWD-Online-Store-Demo
-This is a demo for a web application developed for the course Project: Java and Web Application for IU University of Applied Sciences. Developed by Reuben Grobler. Any and all names and other personal information are fictional, and any resemblance to the information of real people and/or addresses are coincidental.
+This is a demo for a web application developed for the course `Project: Java and Web Application` for `IU University of Applied Sciences`. Developed by Reuben Grobler. Any and all names and other personal information are fictional, and any resemblance to the information of real people and/or addresses are coincidental.
 
 
 ## Installation Instructions
