@@ -464,7 +464,7 @@ function proceedToCheckout() {
                     dateOfPurchase: date,
                     products: products,
                     totalItemsBought: totalItemsBought,
-                    grandTotal: subTotal.toFixed(2)
+                    grandTotal: parseFloat(document.getElementById("GrandTotalInSmallTable").textContent.replace("€", ""))
                 })
             });
 
