@@ -879,6 +879,9 @@ async function signingUpForNewAccount() {
 //Should the coupon be valid, the user is informed that their
 //coupon works and receives a price discount. This price discount
 //is dynamically calculated and added to the Cart Summary table.
+//After the Coupon button has been clicked and the coupon has been
+//successfully verified, the button is hidden in order
+//to avoid users from entering more than one coupon.
 async function checkCoupon() {
 
     //Retrieves variables from the input boxes
@@ -914,6 +917,7 @@ async function checkCoupon() {
     if (data.message == "You have entered a valid coupon! Enjoy your discount!") {
         var discountsCell = document.getElementById("DiscountsInSmallTable");
         var grandTotalCell = document.getElementById("GrandTotalInSmallTable");
+        var checkoutButton = document.getElementById("CouponButton");
 
         var cartSubtotalCellValue = parseFloat(document.getElementById("CartSubtotalInSmallTable").textContent.replace("€", ""));
         var discountsCellValue = parseFloat(document.getElementById("DiscountsInSmallTable").textContent.replace("€", ""));
@@ -924,5 +928,7 @@ async function checkCoupon() {
 
         discountsCell.textContent = "€" + discountsCellValue.toFixed(2);
         grandTotalCell.textContent = "€" + grandTotalCellValue.toFixed(2);
+
+        checkoutButton.style.display = "none";
     }
 };
