@@ -30,3 +30,6 @@ const connect = mysql.createConnection({
 `C:\Users\John\Documents\Phase 2>`
 11. Run the command `node server.js`
 12. Open your browser and type the following into your search bar: `localhost:3000/StorePage.html`
+
+### Disclaimer
+While the directory in this repository that contains all the files needed to run the web application is called `Phase 2`, this directory contains several changes and updates compared to the original Phase 2 submission. It is therefore important to note that this is the final submission for phase 3 while still maintaining the `Phase 2` directory name. The name cannot be changed due to difficulties reorganising all files in a new directory and pushing that change to GitHub.
