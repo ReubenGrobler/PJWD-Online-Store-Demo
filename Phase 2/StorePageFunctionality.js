@@ -547,8 +547,11 @@ function displayStockForProduct(productListing, stockHeader, addToCartButton, up
             const stock = data.data[0];
             var stockDiv = document.createElement("div");
 
-            if (stock.AmountInStock == 0) {
+           if (stock.AmountInStock == 0) {
                 stockDiv.innerHTML = `<h6>In stock: ${stock.AmountInStock}</h6><h3>OUT OF STOCK</h3>`;
+                buttonToBeRemoved.parentNode.removeChild(buttonToBeRemoved);
+            } else if (stock.AmountInStock < 0){
+                stockDiv.innerHTML = `<h6>In stock: ${stock.AmountInStock}</h6><h3>OUT OF STOCK</h3><h5>There is currently a backlog for this product. It will take a while before stock is available again.`;
                 buttonToBeRemoved.parentNode.removeChild(buttonToBeRemoved);
             } else {
                 stockDiv.innerHTML = `<h6>In stock: ${stock.AmountInStock}</h6>`;
