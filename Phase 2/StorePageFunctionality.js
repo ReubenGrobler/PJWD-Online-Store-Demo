@@ -446,6 +446,11 @@ function proceedToCheckout() {
             var integerShoppingCartAmount = shoppingCartAmount.map(Number);
             var totalItemsBought = 0;
 
+            if (integerShoppingCartAmount.length == 0){
+                alert("You cannot checkout with an empty cart.");
+                return;
+            }
+
             for (i; i < integerShoppingCartAmount.length; i++) {
                 totalItemsBought += integerShoppingCartAmount[i];
             }
