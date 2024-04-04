@@ -347,7 +347,7 @@ footer .GoBackButton:hover {
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 365px) {
 
     #MainBanner h3,
     #MainBanner h5 {
@@ -379,6 +379,16 @@ footer .GoBackButton:hover {
     #MainBanner h3,
     #MainBanner h5 {
         display: none;
+    }
+
+    .PopUpMessage img {
+        min-width: 50px;
+        min-height: 50px;
+    }
+
+    .PopUpMessage button {
+        padding: 7.5px 7.5px;
+        margin: 7.5px;
     }
 }
 
