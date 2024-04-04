@@ -88,8 +88,8 @@ function addToCart(addedItem, amountToBuy, availableStock, elementID) {
 //shoppingCartAmount into JSON strings
 //in order to use them on other HTML pages.
 function storesArrays() {
-    localStorage.setItem("shoppingCartListString", JSON.stringify(shoppingCartList));
-    localStorage.setItem("shoppingCartAmountString", JSON.stringify(shoppingCartAmount));
+    sessionStorage.setItem("shoppingCartListString", JSON.stringify(shoppingCartList));
+    sessionStorage.setItem("shoppingCartAmountString", JSON.stringify(shoppingCartAmount));
 };
 
 
@@ -174,8 +174,8 @@ function signUpFormatting() {
 //item from the shoppingCartAmount array. Afterwards, the function
 //displays it in a table on the Cart.html webpage.
 function displayOnCart() {
-    shoppingCartAmount = JSON.parse(localStorage.getItem("shoppingCartAmountString"));
-    shoppingCartList = JSON.parse(localStorage.getItem("shoppingCartListString"));
+    shoppingCartAmount = JSON.parse(sessionStorage.getItem("shoppingCartAmountString"));
+    shoppingCartList = JSON.parse(sessionStorage.getItem("shoppingCartListString"));
 
     var i = 0;
     var checkoutOutput = document.getElementById("CheckoutOutput");
@@ -482,6 +482,7 @@ function proceedToCheckout() {
             }
 
             reduceStockAvailable();
+            sessionStorage.clear();
 
             var popUp = document.getElementById("PopUpCheckout");
             popUp.classList.add("openedPopUpMessage");
