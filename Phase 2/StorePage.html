@@ -21,9 +21,9 @@
     <!--The subheader with the links to other parts of the page-->
     <div class="UserOptionsDiv">
         <ul id="UserOptions">
-            <li><a href="html/LogIn.html" onclick="storesArrays()">Log in</a></li>
-            <li><a href="html/PurchaseHistory.html" onclick="storesArrays()">Purchase History</a></li>
-            <li><a href="html/Cart.html" onclick="storesArrays()">Cart</a></li>
+            <li><a href="html/LogIn.html">Log in</a></li>
+            <li><a href="html/PurchaseHistory.html">Purchase History</a></li>
+            <li><a href="html/Cart.html">Cart</a></li>
         </ul>
     </div>
 
@@ -501,6 +501,19 @@
     <!--Checks if the user is logged in-->
     <script>
         checkIfLoggedIn();
+    </script>
+
+    <!--This code checks if there are any values in the arrays shoppingCartList and shoppingCartAmount.
+    Should there be any values, the page retrieves them. This allows the shopping cart to not be
+    reset on page loads.-->
+    <script>
+        if (localStorage.getItem("shoppingCartListString")) {
+            shoppingCartList = JSON.parse(localStorage.getItem("shoppingCartListString"));
+        }
+
+        if (localStorage.getItem("shoppingCartAmountString")) {
+            shoppingCartAmount = JSON.parse(localStorage.getItem("shoppingCartAmountString"));
+        }
     </script>
 
     <!--Retrieves the current stock available of each product-->
