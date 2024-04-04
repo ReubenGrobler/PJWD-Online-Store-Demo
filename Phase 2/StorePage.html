@@ -507,12 +507,12 @@
     Should there be any values, the page retrieves them. This allows the shopping cart to not be
     reset on page loads.-->
     <script>
-        if (localStorage.getItem("shoppingCartListString")) {
-            shoppingCartList = JSON.parse(localStorage.getItem("shoppingCartListString"));
+        if (sessionStorage.getItem("shoppingCartListString")) {
+            shoppingCartList = JSON.parse(sessionStorage.getItem("shoppingCartListString"));
         }
 
-        if (localStorage.getItem("shoppingCartAmountString")) {
-            shoppingCartAmount = JSON.parse(localStorage.getItem("shoppingCartAmountString"));
+        if (sessionStorage.getItem("shoppingCartAmountString")) {
+            shoppingCartAmount = JSON.parse(sessionStorage.getItem("shoppingCartAmountString"));
         }
     </script>
 
