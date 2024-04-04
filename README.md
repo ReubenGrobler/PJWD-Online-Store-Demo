@@ -33,3 +33,31 @@ const connect = mysql.createConnection({
 
 ### Disclaimer
 While the directory in this repository that contains all the files needed to run the web application is called `Phase 2`, the directory contains several changes and updates compared to the original Phase 2 submission. It is therefore important to note that the current version available is the final submission for Phase 3 while still maintaining the `Phase 2` directory name. The name could not be changed due to difficulties reorganising all files in a new directory and pushing that change to GitHub.
+
+## Credits for images
+
+`MainCover.jpg` -- https://unsplash.com/photos/baked-pastry-on-bowl-n49BjsFf5dI -- Kristen Drew
+
+`LargeChocolateCookie.jpg` -- https://unsplash.com/photos/brown-cookies-on-blue-and-white-ceramic-plate-DoK5qEy2L60 -- American Heritage Cookie
+
+`ApplePieSlice.jpg` -- https://unsplash.com/photos/brown-sliced-cake-on-round-white-ceramic-saucer-D7X-GMeTV7U -- Diliara Garifullina
+
+`StrawberryCakeWhole.jpg` -- https://unsplash.com/photos/strawberry-cake-on-white-ceramic-plate-hXqbSgOPjSI -- Alexandra Khudyntseva
+
+`StrawberryCakeSlice.jpg` -- https://unsplash.com/photos/strawberry-cake-on-white-ceramic-plate-u95_MqFUaQg -- Alexandra Khudyntseva
+
+`Biscotti.jpg` -- https://unsplash.com/photos/a-pile-of-crackers-sitting-on-top-of-a-wooden-cutting-board-ZhGdZLCpvcI -- Geertje Caliguire
+
+`Fudge.jpg` -- https://unsplash.com/photos/brown-cheese-on-white-surface-qk9BPaw_6ys -- Sincerely Media
+
+`MiniQuiche.jpg` -- https://unsplash.com/photos/baked-pie-97mtSRBuu0U -- Brett Jordan
+
+`Doughtnut.jpg` -- https://unsplash.com/photos/brown-and-white-doughnuts-on-white-ceramic-plate-EACvtuV2k2E -- Annie Spratt
+
+`Croissant.jpg` -- https://unsplash.com/photos/a-couple-of-bagels-sitting-on-top-of-a-wooden-tray-qPm8aJtS1Rs -- Anna Bratiychuk
+
+`Scone.jpg` -- https://unsplash.com/photos/a-close-up-of-some-pastries-on-a-table-TZZHPuL2Z2s -- Craig Bradford
+
+`BlueberryMuffin.jpg` -- https://unsplash.com/photos/brown-cookies-on-blue-tray-9Z2XkFOarSM -- Nothing aholic
+
+`SaltedBagel.jpg` -- https://unsplash.com/photos/a-couple-of-bagels-sitting-on-top-of-a-wooden-tray-qPm8aJtS1Rs -- Donghun Shin
