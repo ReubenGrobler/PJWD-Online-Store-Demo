@@ -78,7 +78,9 @@ function addToCart(addedItem, amountToBuy, availableStock, elementID) {
     shoppingCartAmount.push(amountToBuy);
     alert("Your item has been added to your shopping cart!");
 
-    closePopUpMessage(elementID)
+    storesArrays();
+
+    closePopUpMessage(elementID);
 };
 
 
